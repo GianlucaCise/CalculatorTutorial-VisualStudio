@@ -20,7 +20,16 @@ int main()
 	while (true)
 	{
 		cin >> x >> oper >> y;
-		result = c.Calcola(x, oper, y);
+		if (oper == '/' && y == 0)
+		{
+			cout << "Errore matematico: impossibile dividere per zero!" << endl;
+			continue;
+		}
+		else
+		{
+			result = c.Calcola(x, oper, y);
+		}
+
 		cout << "Il risultato " << "di " << x << oper << y << " è: " << result << endl;
 	}
 
